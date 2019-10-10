@@ -7,11 +7,14 @@ public class PlayerTest {
 
     private Player player1;
     private Deck deck;
+    private Card card1;
 
     @Before
     public void before() {
         player1 = new Player("Tom");
         deck = new Deck();
+        card1 = new Card(SuitType.SPADES, RankType.JACK);
+
     }
 
     @Test
@@ -22,6 +25,12 @@ public class PlayerTest {
    @Test
     public void cardsStartEmpty() {
         assertEquals(0, player1.getCards());
+   }
+
+   @Test
+    public void canReceiveCard() {
+        player1.receiveCard(card1);
+        assertEquals(1, player1.getCards());
    }
 
 //   @Test

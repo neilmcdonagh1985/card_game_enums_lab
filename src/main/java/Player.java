@@ -1,8 +1,5 @@
 import java.util.ArrayList;
 
-
-
-
 public class Player {
 
 
@@ -14,7 +11,6 @@ public class Player {
         public Player(String name) {
             this.name = name;
             this.cards = new ArrayList<Card>();
-
         }
 
 
@@ -31,5 +27,6 @@ public class Player {
             this.cards.add(card);
             return this.cards.size();
         }
+
 }
 
