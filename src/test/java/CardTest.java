@@ -17,4 +17,9 @@ public class CardTest {
         assertEquals(SuitType.CLUBS, card.getSuit());
     }
 
+    @Test
+    public void canGetRank() {
+        assertEquals(RankType.FIVE, card.getRank());
+    }
+
 }
