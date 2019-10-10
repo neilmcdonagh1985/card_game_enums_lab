@@ -39,6 +39,7 @@ public class DeckTest {
 
     @Test
     public void canDeal() {
+        deck.populateDeck();
         assertEquals(1, deck.deal());
     }
 
