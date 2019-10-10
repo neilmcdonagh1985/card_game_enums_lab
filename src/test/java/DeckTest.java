@@ -37,6 +37,11 @@ public class DeckTest {
         assertEquals(true, deck.shuffle());
     }
 
+    @Test
+    public void canDeal() {
+        assertEquals(1, deck.deal());
+    }
+
 
 
 

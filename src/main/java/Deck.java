@@ -47,6 +47,14 @@ public class Deck {
         return false;
     }
 
+    public int deal() {
+        ArrayList<Card> dealtCards = new ArrayList<Card>();
+        Collections.shuffle(this.cards);
+        Card dealtCard = this.cards.get(0);
+        dealtCards.add(dealtCard);
+        return dealtCards.size();
+    }
+
     //        Card unshuffledFirstCard = deck.cards.pop()
 
 
