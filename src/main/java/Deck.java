@@ -6,6 +6,7 @@ public class Deck {
     private Card card;
     private ArrayList<Card> cards;
     private ArrayList<String> suits;
+    private Player player;
 
 
     public Deck(){
@@ -47,15 +48,12 @@ public class Deck {
         return false;
     }
 
-    public int deal() {
-        ArrayList<Card> dealtCards = new ArrayList<Card>();
+    public void deal(Player player) {
         Collections.shuffle(this.cards);
         Card dealtCard = this.cards.get(0);
-        dealtCards.add(dealtCard);
-        return dealtCards.size();
+        player.receiveCard(dealtCard);
     }
 
-    //        Card unshuffledFirstCard = deck.cards.pop()
 
 
 }

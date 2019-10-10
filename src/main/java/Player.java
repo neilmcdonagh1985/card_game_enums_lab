@@ -5,8 +5,10 @@ import java.util.ArrayList;
 
 public class Player {
 
+
         private ArrayList<Card> cards;
         private String name;
+        private Card card;
 
 
         public Player(String name) {
@@ -23,6 +25,11 @@ public class Player {
         public int getCards() {
             return this.cards.size();
 
+        }
+
+        public int receiveCard(Card card) {
+            this.cards.add(card);
+            return this.cards.size();
         }
 }
 

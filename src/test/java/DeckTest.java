@@ -7,11 +7,13 @@ public class DeckTest {
 
     private Deck deck;
     private Card card1;
+    private Player player1;
 
     @Before
     public void before() {
         deck = new Deck();
         card1 = new Card(SuitType.DIAMONDS, RankType.NINE);
+        player1 = new Player("Andy");
     }
 
     @Test
@@ -40,8 +42,11 @@ public class DeckTest {
     @Test
     public void canDeal() {
         deck.populateDeck();
-        assertEquals(1, deck.deal());
+        deck.deal(player1);
+        assertEquals(1, player1.getCards());
     }
+
+
 
 
 
