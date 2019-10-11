@@ -19,7 +19,10 @@ public class Game {
         this.players.add(player);
     }
 
-    public Player play() {
-
-    }
+//    public Player play() {
+//        for (Player player :this.players ) {
+//            Card playerCard = player.getCards();
+//
+//        }
+//    }
 }

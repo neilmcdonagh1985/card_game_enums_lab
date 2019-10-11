@@ -29,7 +29,7 @@ public class PlayerTest {
 
    @Test
     public void canReceiveCard() {
-        player1.receiveCard(card1);
+        assertEquals(card1, player1.receiveCard(card1));
         assertEquals(1, player1.getCards());
    }
 

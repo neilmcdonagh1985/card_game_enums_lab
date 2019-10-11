@@ -23,9 +23,9 @@ public class Player {
 
         }
 
-        public int receiveCard(Card card) {
+        public Card receiveCard(Card card) {
             this.cards.add(card);
-            return this.cards.size();
+            return card;
         }
 
 }
