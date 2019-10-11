@@ -24,13 +24,26 @@ public class PlayerTest {
 
    @Test
     public void cardsStartEmpty() {
-        assertEquals(0, player1.getCards());
+        assertEquals(0, player1.cardCount());
    }
 
    @Test
-    public void canReceiveCard() {
-        assertEquals(card1, player1.receiveCard(card1));
-        assertEquals(1, player1.getCards());
+   public void canCountCards() {
+        player1.addCard(card1);
+        assertEquals(1, player1.cardCount());
+   }
+
+   @Test
+    public void canAddCard() {
+        assertEquals(card1, player1.addCard(card1));
+        assertEquals(card1, player1.getCards());
+   }
+
+   @Test
+    public void canGetCards() {
+        player1.addCard(card1);
+        assertEquals(card1, player1.getCards());
+
    }
 
 //   @Test

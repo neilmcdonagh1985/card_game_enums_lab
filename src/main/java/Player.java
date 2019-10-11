@@ -18,15 +18,24 @@ public class Player {
             return this.name;
         }
 
-        public int getCards() {
+        public Card getCards() {
+            for (Card card : this.cards) {
+                return card;
+            }
+            return card;
+        }
+
+        public int cardCount() {
             return this.cards.size();
 
         }
 
-        public Card receiveCard(Card card) {
+
+        public Card addCard(Card card) {
             this.cards.add(card);
             return card;
         }
+
 
 }
 

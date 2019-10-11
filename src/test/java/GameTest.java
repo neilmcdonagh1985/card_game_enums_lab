@@ -11,16 +11,18 @@ public class GameTest {
     private Player player3;
     private Player player4;
     private Player player5;
-    private Card card1;
-    private Card card2;
-    private Card card3;
-    private Card card4;
-    private Card card5;
+//    private Card card1;
+//    private Card card2;
+//    private Card card3;
+//    private Card card4;
+//    private Card card5;
+    private Deck deck;
 
     @Before
     public void before() {
         game = new Game();
         player1 = new Player("Caoimhe");
+        deck = new Deck();
 
     }
 
@@ -37,15 +39,27 @@ public class GameTest {
 
 //    @Test
 //    public void canPlayGame() {
-//        card1 = new Card(SuitType.DIAMONDS, RankType.FOUR);
-//        card2 = new Card(SuitType.SPADES, RankType.KING);
-//        card3 = new Card(SuitType.DIAMONDS, RankType.FIVE);
-//        card4 = new Card(SuitType.HEARTS, RankType.ACE);
-//        card5 = new Card(SuitType.CLUBS, RankType.FOUR);
+//////        card1 = new Card(SuitType.DIAMONDS, RankType.FOUR);
+//////        card2 = new Card(SuitType.SPADES, RankType.KING);
+//////        card3 = new Card(SuitType.DIAMONDS, RankType.FIVE);
+//////        card4 = new Card(SuitType.HEARTS, RankType.ACE);
+//////        card5 = new Card(SuitType.CLUBS, RankType.FOUR);
 //        player2 = new Player("Higgy");
 //        player3 = new Player("Nathan");
 //        player4 = new Player("Alison");
 //        player5 = new Player("Yvonne");
+//        game.addPlayer(player2);
+//        game.addPlayer(player3);
+//        game.addPlayer(player4);
+//        game.addPlayer(player5);
+//        deck.deal(player1);
+//        deck.deal(player2);
+//        deck.deal(player3);
+//        deck.deal(player4);
+//        deck.deal(player5);
+//
+//
+//
 //        assertEquals(player1, game.play());
 //    }
 

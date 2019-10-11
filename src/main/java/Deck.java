@@ -51,7 +51,7 @@ public class Deck {
     public void deal(Player player) {
         Collections.shuffle(this.cards);
         Card dealtCard = this.cards.get(0);
-        player.receiveCard(dealtCard);
+        player.addCard(dealtCard);
     }
 
 

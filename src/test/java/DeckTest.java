@@ -43,7 +43,7 @@ public class DeckTest {
     public void canDeal() {
         deck.populateDeck();
         deck.deal(player1);
-        assertEquals(1, player1.getCards());
+        assertEquals(1, player1.cardCount());
     }
 
 
