@@ -41,14 +41,8 @@ public class DeckTest {
 
     @Test
     public void canDeal() {
-        deck.populateDeck();
         deck.deal(player1);
         assertEquals(1, player1.cardCount());
     }
-
-
-
-
-
 
 }

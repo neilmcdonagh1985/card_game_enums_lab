@@ -49,6 +49,7 @@ public class Deck {
     }
 
     public void deal(Player player) {
+        this.populateDeck();
         Collections.shuffle(this.cards);
         Card dealtCard = this.cards.get(0);
         player.addCard(dealtCard);

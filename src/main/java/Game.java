@@ -20,10 +20,22 @@ public class Game {
         this.players.add(player);
     }
 
-//    public Player play() {
-//        for (Player player :this.players ) {
-//            Card playerCard = player.getCards();
-//
-//        }
-//    }
+    public Player play() {
+
+        int winningNumber = 0;
+        Player winner = null;
+        for (Player player :this.players ) {
+            Card card = player.getCards();
+            int playerCardValue = card.getValueFromEnum();
+            if (playerCardValue > winningNumber) {
+                winningNumber = playerCardValue;
+                winner = player;
+
+            }
+        }
+        return winner;
+    }
+
+
+
 }
