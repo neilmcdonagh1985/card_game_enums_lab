@@ -22,20 +22,27 @@ public class GameTest {
     public void before() {
         game = new Game();
         player1 = new Player("Caoimhe");
+        player2 = new Player("Higgy");
+        player3 = new Player("Nathan");
         deck = new Deck();
 
     }
 
-    @Test
-    public void canGetAllPlayers() {
-        assertEquals(0, game.getAllPlayers());
-    }
+//    @Test
+//    public void canGetAllPlayers() {
+//        game.addPlayer(player1);
+//        game.addPlayer(player2);
+//        game.addPlayer(player3);
+//        assertEquals(0, game.getAllPlayers());
+//    }
 
     @Test
-    public void canAddPlayer() {
+    public void gameHasPlayers() {
         game.addPlayer(player1);
-        assertEquals(1, game.getAllPlayers());
+        game.addPlayer(player2);
+        assertEquals(2, game.playerCount());
     }
+    
 
     @Test
     public void canPlayGame() {
@@ -44,20 +51,18 @@ public class GameTest {
         card3 = new Card(SuitType.DIAMONDS, RankType.FIVE);
         card4 = new Card(SuitType.HEARTS, RankType.ACE);
         card5 = new Card(SuitType.CLUBS, RankType.FOUR);
-        player2 = new Player("Higgy");
-        player3 = new Player("Nathan");
         player4 = new Player("Alison");
         player5 = new Player("Yvonne");
         game.addPlayer(player2);
         game.addPlayer(player3);
         game.addPlayer(player4);
         game.addPlayer(player5);
-        player1.addCard(card1);
-        player2.addCard(card2);
-        player3.addCard(card3);
-        player4.addCard(card4);
-        player5.addCard(card5);
-        assertEquals(player2, game.play());
+        player1.addCard(card4);
+        player2.addCard(card3);
+        player3.addCard(card1);
+        player4.addCard(card5);
+        player5.addCard(card2);
+        assertEquals(player5, game.play());
     }
 
 
